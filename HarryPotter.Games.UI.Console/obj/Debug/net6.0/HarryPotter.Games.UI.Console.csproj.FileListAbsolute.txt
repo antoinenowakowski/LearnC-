@@ -1,0 +1,14 @@
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\bin\Debug\net6.0\HarryPotter.Games.UI.Console.exe
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\bin\Debug\net6.0\HarryPotter.Games.UI.Console.deps.json
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\bin\Debug\net6.0\HarryPotter.Games.UI.Console.runtimeconfig.json
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\bin\Debug\net6.0\HarryPotter.Games.UI.Console.dll
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\bin\Debug\net6.0\HarryPotter.Games.UI.Console.pdb
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\HarryPotter.Games.UI.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\HarryPotter.Games.UI.Console.AssemblyInfoInputs.cache
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\HarryPotter.Games.UI.Console.AssemblyInfo.cs
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\HarryPotter.Games.UI.Console.csproj.CoreCompileInputs.cache
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\HarryPotter.Games.UI.Console.dll
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\refint\HarryPotter.Games.UI.Console.dll
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\HarryPotter.Games.UI.Console.pdb
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\HarryPotter.Games.UI.Console.genruntimeconfig.cache
+C:\Users\antoine\Documents\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\ref\HarryPotter.Games.UI.Console.dll
