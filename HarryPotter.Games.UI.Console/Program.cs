@@ -38,7 +38,31 @@ int ageMinimum = 12;
 int comparaison = ageJoueur.CompareTo(ageMinimum);
 Console.WriteLine("si 1 age > ageMin " + comparaison);
 
-/*// type decimal
+bool estAgeValide = comparaison > 0;
+
+if (/*! estAgeValide ou */ ! (comparaison > 0)) // si je n'ai pas true donc si j'ai false, si age pas valide !
+{
+    Console.WriteLine("Age interdit !");
+    Environment.Exit(0);
+}
+else
+{
+    Console.WriteLine("Tu peux continuer !");
+    if (ageJoueur < 18)
+    {
+        Console.WriteLine("Tu n'es pas majeure !");
+    }
+}
+
+/* première façon de faire
+//if (estAgeValide == false)
+//{
+//    Console.WriteLine("Age interdit !");
+//    Environment.Exit(0);
+//}
+*/
+
+/* type decimal
 // decimal puissanceArme = 10;
 float puissanceArme = 10;
 puissanceArme = 15.5F;
