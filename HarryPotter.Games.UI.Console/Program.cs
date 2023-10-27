@@ -25,30 +25,35 @@ titre.ToUpper();
 
 #region --- PARTIE SAISIE INFORMATIONS JOUER ---
 
-string ageSaisie;
-do
+int ageJoueur = 0;
+bool estAgeValide = false;
+
+while (! estAgeValide) // on peut écrire "estAgeValide == false"
 {
-    Console.WriteLine("Ton âge s'il te plait ?");
-    ageSaisie = Console.ReadLine();
 
-} while (string.IsNullOrWhiteSpace(ageSaisie));
+    #region Vérif saisie non vide
 
-int ageJoueur = int.Parse(ageSaisie);
-int ageMinimum = 12;
+    bool ageSaisiPasValide = true;
+    string ageSaisie = "";
+    do
+    {
+        Console.WriteLine("Ton âge s'il te plait ?");
+        ageSaisie = Console.ReadLine();
+        ageSaisiPasValide = string.IsNullOrWhiteSpace(ageSaisie);
+    } while (ageSaisiPasValide);
+    #endregion
 
-// compare deux entiers
-// renvoie -1 si ageJoueur < ageMinimum, renvoie 1 si ageJoueur > ageMinimum et renvoie 0 si les deux sont ==
-int comparaison = ageJoueur.CompareTo(ageMinimum);
-Console.WriteLine("si 1 age > ageMin " + comparaison);
-bool estAgeValide = comparaison >= 0;
+    ageJoueur = int.Parse(ageSaisie);
+    int ageMinimum = 12;
 
+    // compare deux entiers
+    // renvoie -1 si ageJoueur < ageMinimum, renvoie 1 si ageJoueur > ageMinimum et renvoie 0 si les deux sont ==
+    int comparaison = ageJoueur.CompareTo(ageMinimum);
+    Console.WriteLine(comparaison);
 
-if (/*! estAgeValide ou */ ! (comparaison > 0)) // si je n'ai pas true donc si j'ai false, si age pas valide !
-{
-    Console.WriteLine("Age interdit !");
-    Environment.Exit(0);
-}
-else
+    estAgeValide = comparaison >= 0;}
+
+if (estAgeValide)
 {
     Console.WriteLine("Tu peux continuer !");
     if (ageJoueur < 18)
