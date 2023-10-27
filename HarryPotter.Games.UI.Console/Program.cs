@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Globalization;
 
-
 #region --- début str ---
 
 string titre = "jeu harry potter";
@@ -25,20 +24,24 @@ titre.ToUpper();
 #endregion
 
 #region --- PARTIE SAISIE INFORMATIONS JOUER ---
-Console.WriteLine("Ton âge s'il te plait ?");
-string ageSaisie = Console.ReadLine();
 
-int ageJoueur  = int.Parse(ageSaisie);
-// ageJoueur += 1; // vrai addition mathématique
+string ageSaisie;
+do
+{
+    Console.WriteLine("Ton âge s'il te plait ?");
+    ageSaisie = Console.ReadLine();
 
+} while (string.IsNullOrWhiteSpace(ageSaisie));
+
+int ageJoueur = int.Parse(ageSaisie);
 int ageMinimum = 12;
 
 // compare deux entiers
 // renvoie -1 si ageJoueur < ageMinimum, renvoie 1 si ageJoueur > ageMinimum et renvoie 0 si les deux sont ==
 int comparaison = ageJoueur.CompareTo(ageMinimum);
 Console.WriteLine("si 1 age > ageMin " + comparaison);
+bool estAgeValide = comparaison >= 0;
 
-bool estAgeValide = comparaison > 0;
 
 if (/*! estAgeValide ou */ ! (comparaison > 0)) // si je n'ai pas true donc si j'ai false, si age pas valide !
 {
@@ -52,6 +55,14 @@ else
     {
         Console.WriteLine("Tu n'es pas majeure !");
     }
+    else if (ageJoueur < 40)
+    {
+        Console.WriteLine("ca va tu n'es pas trop vieux !");
+    }
+    else
+    {
+        Console.WriteLine("Tu as plus de 40 ans");
+    }
 }
 
 /* première façon de faire
@@ -61,17 +72,6 @@ else
 //    Environment.Exit(0);
 //}
 */
-
-/* type decimal
-// decimal puissanceArme = 10;
-float puissanceArme = 10;
-puissanceArme = 15.5F;
-
-Console.WriteLine(puissanceArme);
-int valeurParDefaultPuissanceArme = 10;
-puissanceArme = valeurParDefaultPuissanceArme;
-
-// int valeurPuissanceArmeX = (int) puissanceArme;*/
 
 #endregion
 
@@ -83,8 +83,7 @@ string dateSaisie = Console.ReadLine();
 DateTime dateEtHeureNaissance = DateTime.Parse(dateSaisie);
 DateOnly dateNaissance = DateOnly.FromDateTime(dateEtHeureNaissance);  // DateOnly.Parse(dateSaisie);
 
-// TimeOnly;
-Console.WriteLine("tu as saisie " + dateEtHeureNaissance.ToString());
+// TimeOnly;;
 Console.WriteLine("tu as saisie " + dateEtHeureNaissance);
 
 #endregion
@@ -128,6 +127,70 @@ Console.WriteLine(format, 4, ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Subst
 //Console.WriteLine(3 + "." + "Credits");
 //Console.WriteLine(4 + "." + "Quitter");
 */
+
+
+#endregion
+
+#region --- PREPARATION ARME ---
+
+// decimal puissanceArme = 10;
+float puissanceArme = 10;
+puissanceArme = 15.5F;
+
+Console.WriteLine(puissanceArme);
+
+int valeurParDefaultPuissanceArme = 10;
+
+
+Console.WriteLine("Choississez votre arme par défaut pour démarrer le jeu");
+
+for (int i = 0; i < 4; i++)
+{
+    Console.WriteLine($"Arme {i + 1}");
+}
+
+// int valeurPuissanceArmeX = (int) puissanceArme;
+
+#endregion
+
+#region --- CHOIX COTÉ FORCE ---
+
+Console.WriteLine("De quel coté de la force sera tu ?");
+Console.WriteLine("1. coté lumineux");
+Console.WriteLine("2. coté obscur");
+Console.WriteLine("3. neutre");
+
+string SaisieForce = Console.ReadLine();
+int TypeForce = int.Parse(SaisieForce);
+
+const int forceLumineuse = 1;
+const int forceObscur = 2;
+const int sansForce = 3;
+
+// apres le case, il doit y avoir une constante obligatoirement !!
+switch(TypeForce)
+{
+    case forceLumineuse:
+        {
+            Console.WriteLine("tu as choisies lumineux");
+        } 
+        break;
+    case forceObscur:
+        {
+            Console.WriteLine("tu as choisies obscur");
+        }
+        break;
+    case sansForce:
+        {
+            Console.WriteLine("tu as choisies neutre");
+        }
+        break;
+    default: 
+        {
+            Console.WriteLine("Aucune force");
+        }
+        break;
+}
 
 
 #endregion
