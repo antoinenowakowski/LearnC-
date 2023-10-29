@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using HarryPotter.Games.UI.Console.Core;
+using System.Diagnostics;
 using System.Globalization;
 
 #region --- début str ---
@@ -77,55 +78,176 @@ void AfficherItemMenu(string ItemMenu, int indexMenu = 1)
     Console.WriteLine(resultatFormattage);
 }
 
+void AfficherMenu()
+{
+    AfficherItemMenu("nouvelle partie", 1);
+    AfficherItemMenu("charger partie", 2);
+    AfficherItemMenu("crédits", 3);
+    AfficherItemMenu("quitter", 4);
+}
+
+string RecupereSaisieAgeNonVide()
+{
+
+    bool ageSaisiPasValide = true;
+    string ageSaisie = "";
+
+    do
+    {
+
+        Console.WriteLine("Ton âge s'il te plait ?");
+        ageSaisie = Console.ReadLine();
+        ageSaisiPasValide = string.IsNullOrWhiteSpace(ageSaisie);
+
+    } while (ageSaisiPasValide);
+
+    return ageSaisie;
+}
+
+int DemandeEtRecupereAgeValide()
+{
+    int ageJoueur = -1;
+    bool estAgeValide = false;
+
+    while (!estAgeValide) // on peut écrire "estAgeValide == false"
+    {
+
+        string ageSaisie = RecupereSaisieAgeNonVide();
+
+        try
+        {
+            ageJoueur = int.Parse(ageSaisie);
+        }
+        catch (FormatException ex)
+        {
+            ageJoueur = 0;
+            throw new AgeNonValideException();
+            // ici l'exception est "envoyé" à AgeNonValideException(), ça permet une meilleur lisibilité du code.
+            // on peut créer des exceptions pour connaître les règles de gestions d'excéption
+        }
+        finally
+        {
+            Console.WriteLine("pas bien saisi !");
+        }
+
+        int ageMinimum = 12;
+
+        // compare deux entiers
+        // renvoie -1 si ageJoueur < ageMinimum, renvoie 1 si ageJoueur > ageMinimum et renvoie 0 si les deux sont ==
+        int comparaison = ageJoueur.CompareTo(ageMinimum);
+        Console.WriteLine(comparaison);
+
+        estAgeValide = comparaison >= 0;
+    }
+    return ageJoueur;
+}
+
+void AfficherInfoAuSujetAge(int ageJoueur = 0)
+{
+    if (ageJoueur > 0)
+    {
+        Console.WriteLine("Tu peux continuer !");
+        if (ageJoueur < 18)
+        {
+            Console.WriteLine("Tu n'es pas majeure !");
+        }
+        else if (ageJoueur < 40)
+        {
+            Console.WriteLine("ca va tu n'es pas trop vieux !");
+        }
+        else
+        {
+            Console.WriteLine("Tu as plus de 40 ans");
+        }
+    }
+}
+
+int RecupereAgeValide()
+{
+    int ageJoueur = DemandeEtRecupereAgeValide();
+
+    AfficherInfoAuSujetAge(ageJoueur);
+
+    return ageJoueur;
+}
+
+DateOnly RecupererEtAfficherDateDeNaissance()
+{
+    Console.WriteLine("ta date de naissance ?");
+    string dateSaisie = Console.ReadLine();
+
+    DateTime dateEtHeureNaissance = DateTime.Parse(dateSaisie);
+    DateOnly dateNaissance = DateOnly.FromDateTime(dateEtHeureNaissance);  // DateOnly.Parse(dateSaisie);
+
+    // TimeOnly;;
+    Console.WriteLine("tu as saisie " + dateEtHeureNaissance);
+
+    return dateNaissance;
+}
+
+void AfficherArmes()
+{
+    // decimal puissanceArme = 10;
+    float puissanceArme = 10;
+    puissanceArme = 15.5F;
+
+    Console.WriteLine(puissanceArme);
+
+    int valeurParDefaultPuissanceArme = 10;
+
+
+    Console.WriteLine("Choississez votre arme par défaut pour démarrer le jeu");
+
+    for (int i = 0; i < 4; i++)
+    {
+        Console.WriteLine($"Arme {i + 1}");
+    }
+}
+
+void AfficherForceSelectionnee()
+{
+
+
+    int TypeForce = AfficheForceEtRetourneChoixSelection();
+
+    const int forceLumineuse = 1;
+    const int forceObscur = 2;
+    const int sansForce = 3;
+
+    // apres le case, il doit y avoir une constante obligatoirement !!
+    switch (TypeForce)
+    {
+        case forceLumineuse:
+            {
+                Console.WriteLine("tu as choisies lumineux");
+            }
+            break;
+        case forceObscur:
+            {
+                Console.WriteLine("tu as choisies obscur");
+            }
+            break;
+        case sansForce:
+            {
+                Console.WriteLine("tu as choisies neutre");
+            }
+            break;
+        default:
+            {
+                Console.WriteLine("Aucune force");
+            }
+            break;
+    }
+}
+
 #endregion
 
 
 #region --- PARTIE SAISIE INFORMATIONS JOUER ---
 
-int ageJoueur = 0;
-bool estAgeValide = false;
+int ageJoueur = RecupereAgeValide();
 
-while (! estAgeValide) // on peut écrire "estAgeValide == false"
-{
-
-    #region Vérif saisie non vide
-
-    bool ageSaisiPasValide = true;
-    string ageSaisie = "";
-    do
-    {
-        Console.WriteLine("Ton âge s'il te plait ?");
-        ageSaisie = Console.ReadLine();
-        ageSaisiPasValide = string.IsNullOrWhiteSpace(ageSaisie);
-    } while (ageSaisiPasValide);
-    #endregion
-
-    ageJoueur = int.Parse(ageSaisie);
-    int ageMinimum = 12;
-
-    // compare deux entiers
-    // renvoie -1 si ageJoueur < ageMinimum, renvoie 1 si ageJoueur > ageMinimum et renvoie 0 si les deux sont ==
-    int comparaison = ageJoueur.CompareTo(ageMinimum);
-    Console.WriteLine(comparaison);
-
-    estAgeValide = comparaison >= 0;}
-
-if (estAgeValide)
-{
-    Console.WriteLine("Tu peux continuer !");
-    if (ageJoueur < 18)
-    {
-        Console.WriteLine("Tu n'es pas majeure !");
-    }
-    else if (ageJoueur < 40)
-    {
-        Console.WriteLine("ca va tu n'es pas trop vieux !");
-    }
-    else
-    {
-        Console.WriteLine("Tu as plus de 40 ans");
-    }
-}
+Console.WriteLine(ageJoueur);
 
 /* première façon de faire
 //if (estAgeValide == false)
@@ -139,18 +261,13 @@ if (estAgeValide)
 
 #region --- DATE DE NAISSANCE ---
 
-Console.WriteLine("ta date de naissance ?");
-string dateSaisie = Console.ReadLine();
-
-DateTime dateEtHeureNaissance = DateTime.Parse(dateSaisie);
-DateOnly dateNaissance = DateOnly.FromDateTime(dateEtHeureNaissance);  // DateOnly.Parse(dateSaisie);
-
-// TimeOnly;;
-Console.WriteLine("tu as saisie " + dateEtHeureNaissance);
+RecupererEtAfficherDateDeNaissance();
 
 #endregion
 
 #region --- AFFICHAGE MENU  ---
+
+#region ancien affichage
 
 /* explications formatage 2 étapes
 "{0}.{1}" => string.Format() prend 1 caractère (ici {0} et sera 1)
@@ -184,11 +301,6 @@ Console.WriteLine(resultatFormattage);
 
 */
 
-AfficherItemMenu("nouvelle partie", 1);
-AfficherItemMenu("charger partie", 2);
-AfficherItemMenu("crédits", 3);
-AfficherItemMenu("quitter", 4);
-
 /* Première étape avant formattage
 // prend la var, prend premier caractère -> upper et ajoute le reste (à partir du deuxième car) -> lower
 //Console.WriteLine(1 + "." + ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Substring(1).ToLower());
@@ -199,23 +311,13 @@ AfficherItemMenu("quitter", 4);
 
 #endregion
 
+AfficherMenu();
+
+#endregion
+
 #region --- PREPARATION ARME ---
 
-// decimal puissanceArme = 10;
-float puissanceArme = 10;
-puissanceArme = 15.5F;
-
-Console.WriteLine(puissanceArme);
-
-int valeurParDefaultPuissanceArme = 10;
-
-
-Console.WriteLine("Choississez votre arme par défaut pour démarrer le jeu");
-
-for (int i = 0; i < 4; i++)
-{
-    Console.WriteLine($"Arme {i + 1}");
-}
+AfficherArmes();
 
 // int valeurPuissanceArmeX = (int) puissanceArme;
 
@@ -223,37 +325,7 @@ for (int i = 0; i < 4; i++)
 
 #region --- CHOIX COTÉ FORCE ---
 
-int TypeForce = AfficheForceEtRetourneChoixSelection();
-
-const int forceLumineuse = 1;
-const int forceObscur = 2;
-const int sansForce = 3;
-
-// apres le case, il doit y avoir une constante obligatoirement !!
-switch(TypeForce)
-{
-    case forceLumineuse:
-        {
-            Console.WriteLine("tu as choisies lumineux");
-        } 
-        break;
-    case forceObscur:
-        {
-            Console.WriteLine("tu as choisies obscur");
-        }
-        break;
-    case sansForce:
-        {
-            Console.WriteLine("tu as choisies neutre");
-        }
-        break;
-    default: 
-        {
-            Console.WriteLine("Aucune force");
-        }
-        break;
-}
-
+AfficherForceSelectionnee();
 
 #endregion
 
