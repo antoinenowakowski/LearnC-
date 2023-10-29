@@ -23,6 +23,63 @@ titre.ToUpper();
 
 #endregion
 
+
+#region --- FRAMEWORK DU PROJET ---
+
+// Affiche les crédits sur la console
+void AffichageCredits()
+{
+    Console.WriteLine("Antoine Nowakowski");
+    Console.WriteLine("2023");
+}
+
+void AfficherChoixForce()
+{
+    Console.WriteLine("De quel coté de la force sera tu ?");
+    Console.WriteLine("1. coté lumineux");
+    Console.WriteLine("2. coté obscur");
+    Console.WriteLine("3. neutre");
+}
+
+int AfficheForceEtRetourneChoixSelection()
+{
+    AfficherChoixForce();
+    string SaisieForce = Console.ReadLine();
+    int TypeForce = int.Parse(SaisieForce);
+
+    return TypeForce;
+    // on peut très bien faire :
+    // return int.Parse(SaisieForce);
+}
+
+int[,] PrepareGrilleDuJeu()
+{
+    // tableau matriciel
+    int[,] grilleDeJeu = new int[20, 20];
+    const int valeurSansElement = -1;
+
+
+    for (int i = 0; i < grilleDeJeu.GetLength(0); i++)
+    {
+        for (int j = 0; j < grilleDeJeu.GetLength(1); j++)
+        {
+            grilleDeJeu[i, j] = valeurSansElement;
+        }
+    }
+    return grilleDeJeu;
+}
+
+void AfficherItemMenu(string ItemMenu, int indexMenu = 1)
+{
+    string format = "{0}.{1}";
+
+    string resultatFormattage = string.Format(format, indexMenu, ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Substring(1).ToLower());
+    Console.WriteLine(resultatFormattage);
+}
+
+#endregion
+
+
 #region --- PARTIE SAISIE INFORMATIONS JOUER ---
 
 int ageJoueur = 0;
@@ -100,12 +157,8 @@ Console.WriteLine("tu as saisie " + dateEtHeureNaissance);
 puis met un point ensuite prend un deuxième caractère (ici {1} et sera ItemMenu) 
 */
 
-string format = "{0}.{1}";
-
 /* formatage une étape
 */
-string ItemMenu = "nouvelle partie";
-Console.WriteLine(format, 1, ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Substring(1).ToLower());
 
 /* formatage deux étapes
 //string ItemMenu = "nouvelle partie";
@@ -113,17 +166,28 @@ Console.WriteLine(format, 1, ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Subst
 //Console.WriteLine(resultatFormattage);
 */
 
+/* Ancien affichage du menu
+string ItemMenu = "nouvelle partie";
+Console.WriteLine(format, 1, ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Substring(1).ToLower());
+
 ItemMenu = "Charger partie";
 string resultatFormattage = $"{2}. {ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Substring(1).ToLower()}";   //string.Format(format, 1, ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Substring(1).ToLower());
-Console.WriteLine(format, 2, ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Substring(1).ToLower());
+Console.WriteLine(resultatFormattage);
 
 ItemMenu = "Credits";
-Console.WriteLine(format, 3, ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Substring(1).ToLower());
+resultatFormattage = string.Format(format, 3, ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Substring(1).ToLower());
+Console.WriteLine(resultatFormattage);
 
 ItemMenu = "Quitter";
-Console.WriteLine(format, 4, ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Substring(1).ToLower());
+resultatFormattage = string.Format(format, 4, ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Substring(1).ToLower());
+Console.WriteLine(resultatFormattage);
 
+*/
 
+AfficherItemMenu("nouvelle partie", 1);
+AfficherItemMenu("charger partie", 2);
+AfficherItemMenu("crédits", 3);
+AfficherItemMenu("quitter", 4);
 
 /* Première étape avant formattage
 // prend la var, prend premier caractère -> upper et ajoute le reste (à partir du deuxième car) -> lower
@@ -132,7 +196,6 @@ Console.WriteLine(format, 4, ItemMenu.Substring(0, 1).ToUpper() + ItemMenu.Subst
 //Console.WriteLine(3 + "." + "Credits");
 //Console.WriteLine(4 + "." + "Quitter");
 */
-
 
 #endregion
 
@@ -159,22 +222,6 @@ for (int i = 0; i < 4; i++)
 #endregion
 
 #region --- CHOIX COTÉ FORCE ---
-
-int AfficheForceEtRetourneChoixSelection()
-{
-    Console.WriteLine("De quel coté de la force sera tu ?");
-    Console.WriteLine("1. coté lumineux");
-    Console.WriteLine("2. coté obscur");
-    Console.WriteLine("3. neutre");
-
-    string SaisieForce = Console.ReadLine();
-    int TypeForce = int.Parse(SaisieForce);
-
-    return TypeForce;
-    // on peut très bien faire :
-    // return int.Parse(SaisieForce);
-
-}
 
 int TypeForce = AfficheForceEtRetourneChoixSelection();
 
@@ -227,18 +274,7 @@ string[] noms = new string[4];
 Console.WriteLine(noms[2]);
 */
 
-// tableau matriciel
-int[,] grilleDeJeu = new int[20, 20];
-const int valeurSansElement = -1;
-
-
-for (int i = 0;i < grilleDeJeu.GetLength(0); i++)
-{
-    for (int j = 0; j < grilleDeJeu.GetLength(1); j++)
-    {
-        grilleDeJeu[i, j] = valeurSansElement;
-    }
-}
+int[,] grille = PrepareGrilleDuJeu();
 
 /* tableau de tableau
 int[][] grilleDeJeuDeux = new int[20][];
@@ -254,10 +290,5 @@ for (int i = 0; i < 20; i++)
 #region --- AFFICHAGE CREDITS ---
 
 AffichageCredits();
-void AffichageCredits()
-{
-    Console.WriteLine("Antoine Nowakowski");
-    Console.WriteLine("2023");
-}
 
 #endregion
