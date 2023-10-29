@@ -160,13 +160,23 @@ for (int i = 0; i < 4; i++)
 
 #region --- CHOIX COTÉ FORCE ---
 
-Console.WriteLine("De quel coté de la force sera tu ?");
-Console.WriteLine("1. coté lumineux");
-Console.WriteLine("2. coté obscur");
-Console.WriteLine("3. neutre");
+int AfficheForceEtRetourneChoixSelection()
+{
+    Console.WriteLine("De quel coté de la force sera tu ?");
+    Console.WriteLine("1. coté lumineux");
+    Console.WriteLine("2. coté obscur");
+    Console.WriteLine("3. neutre");
 
-string SaisieForce = Console.ReadLine();
-int TypeForce = int.Parse(SaisieForce);
+    string SaisieForce = Console.ReadLine();
+    int TypeForce = int.Parse(SaisieForce);
+
+    return TypeForce;
+    // on peut très bien faire :
+    // return int.Parse(SaisieForce);
+
+}
+
+int TypeForce = AfficheForceEtRetourneChoixSelection();
 
 const int forceLumineuse = 1;
 const int forceObscur = 2;
@@ -197,5 +207,57 @@ switch(TypeForce)
         break;
 }
 
+
+#endregion
+
+#region --- MOTEUR DU JEU ---
+
+/* approche tableau simple
+int positionJoueur = 1;
+
+int[] positions = new int[10];
+
+var position = positions[0];
+Console.WriteLine(position);
+
+bool[] etats = new bool[5];
+Console.WriteLine(etats[2]);
+
+string[] noms = new string[4];
+Console.WriteLine(noms[2]);
+*/
+
+// tableau matriciel
+int[,] grilleDeJeu = new int[20, 20];
+const int valeurSansElement = -1;
+
+
+for (int i = 0;i < grilleDeJeu.GetLength(0); i++)
+{
+    for (int j = 0; j < grilleDeJeu.GetLength(1); j++)
+    {
+        grilleDeJeu[i, j] = valeurSansElement;
+    }
+}
+
+/* tableau de tableau
+int[][] grilleDeJeuDeux = new int[20][];
+
+for (int i = 0; i < 20; i++)
+{
+    grilleDeJeuDeux[i] = new int[20];
+}
+*/
+
+#endregion
+
+#region --- AFFICHAGE CREDITS ---
+
+AffichageCredits();
+void AffichageCredits()
+{
+    Console.WriteLine("Antoine Nowakowski");
+    Console.WriteLine("2023");
+}
 
 #endregion
