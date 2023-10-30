@@ -97,6 +97,7 @@ string RecupereSaisieAgeNonVide()
 
         Console.WriteLine("Ton âge s'il te plait ?");
         ageSaisie = Console.ReadLine();
+
         ageSaisiPasValide = string.IsNullOrWhiteSpace(ageSaisie);
 
     } while (ageSaisiPasValide);
@@ -114,21 +115,25 @@ int DemandeEtRecupereAgeValide()
 
         string ageSaisie = RecupereSaisieAgeNonVide();
 
-        try
-        {
-            ageJoueur = int.Parse(ageSaisie);
-        }
-        catch (FormatException ex)
-        {
-            ageJoueur = 0;
-            throw new AgeNonValideException();
-            // ici l'exception est "envoyé" à AgeNonValideException(), ça permet une meilleur lisibilité du code.
-            // on peut créer des exceptions pour connaître les règles de gestions d'excéption
-        }
-        finally
-        {
-            Console.WriteLine("pas bien saisi !");
-        }
+        int.TryParse(ageSaisie, out ageJoueur);
+
+        /* try catch
+        //try
+        //{
+        //    ageJoueur = int.Parse(ageSaisie);
+        //}
+        //catch (FormatException ex)
+        //{
+        //    ageJoueur = 0;
+        //    throw new AgeNonValideException();
+        //    // ici l'exception est "envoyé" à AgeNonValideException(), ça permet une meilleur lisibilité du code.
+        //    // on peut créer des exceptions pour connaître les règles de gestions d'excéption
+        //}
+        //finally
+        //{
+        //    Console.WriteLine("pas bien saisi !");
+        //}
+        */
 
         int ageMinimum = 12;
 
@@ -242,6 +247,42 @@ void AfficherForceSelectionnee()
 
 #endregion
 
+#region --- MOTEUR DU JEU ---
+
+/* approche tableau simple
+int positionJoueur = 1;
+
+int[] positions = new int[10];
+
+var position = positions[0];
+Console.WriteLine(position);
+
+bool[] etats = new bool[5];
+Console.WriteLine(etats[2]);
+
+string[] noms = new string[4];
+Console.WriteLine(noms[2]);
+*/
+
+Player player = new Player("yoda");
+int[,] grille; 
+
+void InitDonneesJeu()
+{
+    grille = PrepareGrilleDuJeu();
+}
+
+
+/* tableau de tableau
+int[][] grilleDeJeuDeux = new int[20][];
+
+for (int i = 0; i < 20; i++)
+{
+    grilleDeJeuDeux[i] = new int[20];
+}
+*/
+
+#endregion
 
 #region --- PARTIE SAISIE INFORMATIONS JOUER ---
 
@@ -261,7 +302,14 @@ Console.WriteLine(ageJoueur);
 
 #region --- DATE DE NAISSANCE ---
 
-RecupererEtAfficherDateDeNaissance();
+DateOnly dateNaissance = RecupererEtAfficherDateDeNaissance();
+player.DateDeNaissance = dateNaissance;
+
+Console.WriteLine($"Le player a la date {player.DateDeNaissance}");
+
+
+//var player2 = new Player();
+//Console.WriteLine($"Le player a la date {player2.DateDeNaissance}");
 
 #endregion
 
@@ -326,36 +374,6 @@ AfficherArmes();
 #region --- CHOIX COTÉ FORCE ---
 
 AfficherForceSelectionnee();
-
-#endregion
-
-#region --- MOTEUR DU JEU ---
-
-/* approche tableau simple
-int positionJoueur = 1;
-
-int[] positions = new int[10];
-
-var position = positions[0];
-Console.WriteLine(position);
-
-bool[] etats = new bool[5];
-Console.WriteLine(etats[2]);
-
-string[] noms = new string[4];
-Console.WriteLine(noms[2]);
-*/
-
-int[,] grille = PrepareGrilleDuJeu();
-
-/* tableau de tableau
-int[][] grilleDeJeuDeux = new int[20][];
-
-for (int i = 0; i < 20; i++)
-{
-    grilleDeJeuDeux[i] = new int[20];
-}
-*/
 
 #endregion
 
