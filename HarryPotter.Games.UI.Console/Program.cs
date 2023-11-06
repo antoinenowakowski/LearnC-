@@ -264,6 +264,7 @@ Console.WriteLine(noms[2]);
 */
 
 Player player = new Player("yoda");
+Enemy ennemi = new(100, "dark vador");
 int[,] grille; 
 
 void InitDonneesJeu()
@@ -387,7 +388,6 @@ InitDonneesJeu();
 #region --- Lancement du Jeu ---
 
 player.SeDeplacer();
-player.Attaquer(joue);
-
+player.Attaquer(ennemi);
 
 #endregion

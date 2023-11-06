@@ -48,10 +48,10 @@ namespace HarryPotter.Games.UI.Console.Core
         /// </summary>
         public void SeDeplacer()
         {
-            System.Console.WriteLine("je me déplace");
+            System.Console.WriteLine($"{this.Pseudo} je me déplace");
         }
 
-        public void Attaquer(dynamic enemy)
+        public void Attaquer(Enemy enemy)
         {
             System.Console.WriteLine("j'attaque l'ennemi {0}", enemy);
         }
@@ -68,7 +68,7 @@ namespace HarryPotter.Games.UI.Console.Core
             }
             set
             {
-                if (this.dateDeNaissance == DateOnly.MinValue)
+                if (value == DateOnly.MinValue)
                 {
                     throw new ArgumentException("dateDeNaissance"); 
                 }
@@ -80,8 +80,10 @@ namespace HarryPotter.Games.UI.Console.Core
         public string Email { get => email; set => email = value; }
 
         public string Pseudo { get; set; } = "Yoda";
-        #endregion
 
+        public int PointsDeVie { get; set; }
+
+        #endregion
 
     }
 }
