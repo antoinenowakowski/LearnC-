@@ -1,4 +1,0 @@
-C:\Users\antoine\Documents\dev\c#\Apprendre_c#\Apprendre_c#\obj\Debug\net6.0\Apprendre_c#.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\antoine\Documents\dev\c#\Apprendre_c#\Apprendre_c#\obj\Debug\net6.0\Apprendre_c#.AssemblyInfoInputs.cache
-C:\Users\antoine\Documents\dev\c#\Apprendre_c#\Apprendre_c#\obj\Debug\net6.0\Apprendre_c#.AssemblyInfo.cs
-C:\Users\antoine\Documents\dev\c#\Apprendre_c#\Apprendre_c#\obj\Debug\net6.0\Apprendre_c#.csproj.CoreCompileInputs.cache
