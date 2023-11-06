@@ -1,6 +1,4 @@
-﻿using HarryPotter.Games.UI.Console.Core;
-using System.Diagnostics;
-using System.Globalization;
+﻿
 
 #region --- début str ---
 
@@ -265,13 +263,12 @@ Console.WriteLine(noms[2]);
 
 Player player = new Player("yoda");
 Enemy ennemi = new(100, "dark vador");
-int[,] grille; 
+int[,] grille;
 
 void InitDonneesJeu()
 {
     grille = PrepareGrilleDuJeu();
 }
-
 
 /* tableau de tableau
 int[][] grilleDeJeuDeux = new int[20][];
@@ -284,7 +281,7 @@ for (int i = 0; i < 20; i++)
 
 #endregion
 
-#region --- AFFICHAGE MENU  ---
+#region  --- AFFICHAGE MENU  ---
 
 #region ancien affichage
 
@@ -350,7 +347,7 @@ Console.WriteLine(ageJoueur);
 
 #endregion
 
-#region --- DATE DE NAISSANCE ---
+#region --- DATE DE NAISSANCE --- 
 
 DateOnly dateNaissance = RecupererEtAfficherDateDeNaissance();
 player.DateDeNaissance = dateNaissance;

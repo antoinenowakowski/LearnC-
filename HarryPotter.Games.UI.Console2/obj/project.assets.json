@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "HarryPotter.Games.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/HarryPotter.Games.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HarryPotter.Games.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "HarryPotter.Games.Core/1.0.0": {
+      "type": "project",
+      "path": "../HarryPotter.Games.Core/HarryPotter.Games.Core.csproj",
+      "msbuildProject": "../HarryPotter.Games.Core/HarryPotter.Games.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "HarryPotter.Games.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\antoine\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\antoine\\Desktop\\dev\\c#\\Apprendre_c#\\HarryPotter.Games.Core\\HarryPotter.Games.Core.csproj": {
+              "projectPath": "C:\\Users\\antoine\\Desktop\\dev\\c#\\Apprendre_c#\\HarryPotter.Games.Core\\HarryPotter.Games.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

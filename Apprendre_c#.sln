@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Apprendre_c#", "Apprendre_c#\Apprendre_c#.csproj", "{18A985EB-A6AA-4D92-A9BF-139DA40EF99E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HarryPotter.Games.UI.Console", "HarryPotter.Games.UI.Console\HarryPotter.Games.UI.Console.csproj", "{40440EFD-F991-458F-B79C-9FD0F3087C99}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HarryPotter.Games.UI.Console2", "HarryPotter.Games.UI.Console2\HarryPotter.Games.UI.Console2.csproj", "{443FC2E7-B7E6-4F00-B6A8-2DD91F4366D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{B70DEA8D-BCB8-4DCB-8BC7-B58C02D85E13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{D9A5D7D6-95ED-4809-894E-F4FA4FF60941}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarryPotter.Games.Core", "HarryPotter.Games.Core\HarryPotter.Games.Core.csproj", "{7D6B0BA5-B2BF-4EA8-97EF-629645CD7226}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{18A985EB-A6AA-4D92-A9BF-139DA40EF99E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18A985EB-A6AA-4D92-A9BF-139DA40EF99E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18A985EB-A6AA-4D92-A9BF-139DA40EF99E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18A985EB-A6AA-4D92-A9BF-139DA40EF99E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{40440EFD-F991-458F-B79C-9FD0F3087C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{40440EFD-F991-458F-B79C-9FD0F3087C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40440EFD-F991-458F-B79C-9FD0F3087C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,9 +27,18 @@ Global
 		{443FC2E7-B7E6-4F00-B6A8-2DD91F4366D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{443FC2E7-B7E6-4F00-B6A8-2DD91F4366D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{443FC2E7-B7E6-4F00-B6A8-2DD91F4366D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D6B0BA5-B2BF-4EA8-97EF-629645CD7226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D6B0BA5-B2BF-4EA8-97EF-629645CD7226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D6B0BA5-B2BF-4EA8-97EF-629645CD7226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D6B0BA5-B2BF-4EA8-97EF-629645CD7226}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{40440EFD-F991-458F-B79C-9FD0F3087C99} = {D9A5D7D6-95ED-4809-894E-F4FA4FF60941}
+		{443FC2E7-B7E6-4F00-B6A8-2DD91F4366D4} = {D9A5D7D6-95ED-4809-894E-F4FA4FF60941}
+		{7D6B0BA5-B2BF-4EA8-97EF-629645CD7226} = {B70DEA8D-BCB8-4DCB-8BC7-B58C02D85E13}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A2F0A14-0067-467E-9065-18A4B7229F2E}

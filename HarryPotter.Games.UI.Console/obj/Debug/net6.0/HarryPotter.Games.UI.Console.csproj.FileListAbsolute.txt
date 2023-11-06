@@ -26,3 +26,7 @@ C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\De
 C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\HarryPotter.Games.UI.Console.pdb
 C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\HarryPotter.Games.UI.Console.genruntimeconfig.cache
 C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\ref\HarryPotter.Games.UI.Console.dll
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\bin\Debug\net6.0\HarryPotter.Games.Core.dll
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\bin\Debug\net6.0\HarryPotter.Games.Core.pdb
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\HarryPotter.Games.UI.Console.csproj.AssemblyReference.cache
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.UI.Console\obj\Debug\net6.0\HarryPotter.Games.UI.Console.csproj.CopyComplete
