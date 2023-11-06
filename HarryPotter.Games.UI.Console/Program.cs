@@ -24,7 +24,6 @@ titre.ToUpper();
 
 #endregion
 
-
 #region --- FRAMEWORK DU PROJET ---
 
 // Affiche les crédits sur la console
@@ -284,35 +283,6 @@ for (int i = 0; i < 20; i++)
 
 #endregion
 
-#region --- PARTIE SAISIE INFORMATIONS JOUER ---
-
-int ageJoueur = RecupereAgeValide();
-
-Console.WriteLine(ageJoueur);
-
-/* première façon de faire
-//if (estAgeValide == false)
-//{
-//    Console.WriteLine("Age interdit !");
-//    Environment.Exit(0);
-//}
-*/
-
-#endregion
-
-#region --- DATE DE NAISSANCE ---
-
-DateOnly dateNaissance = RecupererEtAfficherDateDeNaissance();
-player.DateDeNaissance = dateNaissance;
-
-Console.WriteLine($"Le player a la date {player.DateDeNaissance}");
-
-
-//var player2 = new Player();
-//Console.WriteLine($"Le player a la date {player2.DateDeNaissance}");
-
-#endregion
-
 #region --- AFFICHAGE MENU  ---
 
 #region ancien affichage
@@ -363,6 +333,35 @@ AfficherMenu();
 
 #endregion
 
+#region --- PARTIE SAISIE INFORMATIONS JOUER ---
+
+int ageJoueur = RecupereAgeValide();
+
+Console.WriteLine(ageJoueur);
+
+/* première façon de faire
+//if (estAgeValide == false)
+//{
+//    Console.WriteLine("Age interdit !");
+//    Environment.Exit(0);
+//}
+*/
+
+#endregion
+
+#region --- DATE DE NAISSANCE ---
+
+DateOnly dateNaissance = RecupererEtAfficherDateDeNaissance();
+player.DateDeNaissance = dateNaissance;
+
+Console.WriteLine($"Le player a la date {player.DateDeNaissance}");
+
+
+//var player2 = new Player();
+//Console.WriteLine($"Le player a la date {player2.DateDeNaissance}");
+
+#endregion
+
 #region --- PREPARATION ARME ---
 
 AfficherArmes();
@@ -380,5 +379,15 @@ AfficherForceSelectionnee();
 #region --- AFFICHAGE CREDITS ---
 
 AffichageCredits();
+
+#endregion
+
+InitDonneesJeu();
+
+#region --- Lancement du Jeu ---
+
+player.SeDeplacer();
+player.Attaquer(joue);
+
 
 #endregion

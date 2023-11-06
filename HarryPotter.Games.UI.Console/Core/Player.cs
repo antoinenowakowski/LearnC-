@@ -41,6 +41,23 @@ namespace HarryPotter.Games.UI.Console.Core
 
         #endregion
 
+        #region Public méthods
+
+        /// <summary>
+        /// Méthodes qui permet de changer la position du joueur
+        /// </summary>
+        public void SeDeplacer()
+        {
+            System.Console.WriteLine("je me déplace");
+        }
+
+        public void Attaquer(dynamic enemy)
+        {
+            System.Console.WriteLine("j'attaque l'ennemi {0}", enemy);
+        }
+
+        #endregion
+
         #region Properties 
 
         public DateOnly DateDeNaissance
@@ -49,7 +66,7 @@ namespace HarryPotter.Games.UI.Console.Core
             {
                 return this.dateDeNaissance;
             }
-            private set
+            set
             {
                 if (this.dateDeNaissance == DateOnly.MinValue)
                 {
@@ -60,11 +77,11 @@ namespace HarryPotter.Games.UI.Console.Core
             }
         }
 
-        #endregion
-
         public string Email { get => email; set => email = value; }
 
         public string Pseudo { get; set; } = "Yoda";
+        #endregion
+
 
     }
 }
