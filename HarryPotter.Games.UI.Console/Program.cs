@@ -1,5 +1,4 @@
 ﻿
-
 #region --- début str ---
 
 string titre = "jeu harry potter";
@@ -27,8 +26,10 @@ titre.ToUpper();
 // Affiche les crédits sur la console
 void AffichageCredits()
 {
+    Console.WriteLine("******************");
     Console.WriteLine("Antoine Nowakowski");
     Console.WriteLine("2023");
+    Console.WriteLine("******************");
 }
 
 void AfficherChoixForce()
@@ -384,7 +385,11 @@ InitDonneesJeu();
 
 #region --- Lancement du Jeu ---
 
-player.SeDeplacer();
+player.SeDeplacer(new Position(x : 1, y : 1));
+// player.SeDeplacer(new Position() { X = 1, Y = 1 });
 player.Attaquer(ennemi);
+
+ennemi.SeDeplacer();
+ennemi.Attaquer(player);
 
 #endregion

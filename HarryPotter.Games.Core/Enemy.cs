@@ -9,7 +9,7 @@ namespace HarryPotter.Games.Core
     /// <summary>
     /// Classe qui représente les ennemies dans le jeu
     /// </summary>
-    public class Enemy
+    public class Enemy : Character
     {
 
         #region Constantes
@@ -21,8 +21,6 @@ namespace HarryPotter.Games.Core
         #region Properties
 
         public int PointsDeVie { get; set; } = DEFAULT_POINT_DE_VIE;
-
-        public string Prenom { get; set; } = string.Empty; // équivaut à : ""
 
         #endregion
 
@@ -48,14 +46,12 @@ namespace HarryPotter.Games.Core
 
         #region Publis methods
 
-        public void SeDeplacer()
+        public override void SeDeplacer()
         {
-            System.Console.WriteLine($"{this.Prenom} Je me déplace !");
-        }
 
-        public void Attaque(Player Joueur)
-        {
-            System.Console.WriteLine("L'ennemi attaque {0}", Joueur);
+            // base.SeDeplacer();
+            Console.WriteLine($"{this.Prenom} Saute !");
+
         }
 
         #endregion
