@@ -328,6 +328,9 @@ Console.WriteLine(resultatFormattage);
 
 #endregion
 
+// créer classe qui représente le menu
+// sous classe item du menu
+
 AfficherMenu();
 
 #endregion
@@ -370,6 +373,9 @@ AfficherArmes();
 #endregion
 
 #region --- CHOIX COTÉ FORCE ---
+
+// classe force; puis lister force
+// selctionner et affecter au player
 
 AfficherForceSelectionnee();
 

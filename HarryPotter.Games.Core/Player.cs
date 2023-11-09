@@ -24,22 +24,19 @@ namespace HarryPotter.Games.Core
 
         #region Constructors
 
-        public Player() : this() {}
+        public Player() : this(String.Empty, DateOnly.MinValue) {}
 
-        public Player(DateOnly dateNaissance)
+        public Player(string pseudo, DateOnly dateNaissance): base(pseudo)
         {
             this.dateDeNaissance = dateNaissance;
         }
 
-        public Player(string pseudo)
+        public Player(DateOnly dateNaissance) : this(string.Empty, dateNaissance)
         {
-            this.Prenom = pseudo;
         }
 
-        public Player(string pseudo, DateOnly dateNaissance)
+        public Player(string pseudo) : this(pseudo, DateOnly.MinValue)
         {
-            this.Prenom = pseudo;
-            this.dateDeNaissance = dateNaissance;
         }
 
         #endregion
