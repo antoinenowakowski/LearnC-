@@ -11,14 +11,14 @@ namespace HarryPotter.Games.Core
     /// Classe qui définit le côté de la force
     /// </summary>
 
-    public class Force
+    public abstract class Force
     {
 
         #region Fields
 
         public int Id { get; set; }
 
-        public string Libelle { get; set; }
+        public string Libelle { get; set; } = string.Empty;
 
         #endregion
 

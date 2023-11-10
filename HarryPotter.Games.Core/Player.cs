@@ -76,6 +76,8 @@ namespace HarryPotter.Games.Core
 
         public int PointsDeVie { get; set; }
 
+        public Force ForceSelectionnee { get; set; }
+
         #endregion
 
     }

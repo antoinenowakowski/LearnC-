@@ -17,8 +17,7 @@ namespace HarryPotter.Games.Core
 
         public NeutreForce(): base("Côté neutre")
         {
-            this.Id = 0;
-            Console.WriteLine("Vous êtes neutre.");
+            this.Id = 3;
         }
 
         #endregion

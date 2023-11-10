@@ -21,6 +21,16 @@ titre.ToUpper();
 
 #endregion
 
+#region VariablesGlobal
+
+
+Player player = new Player("yoda");
+Enemy ennemi = new(100, "dark vador");
+
+List<Force> forces = new List<Force>();
+
+#endregion
+
 #region --- FRAMEWORK DU PROJET ---
 
 // Affiche les crédits sur la console
@@ -32,19 +42,29 @@ void AffichageCredits()
     Console.WriteLine("******************");
 }
 
+void PreparerListeForce()
+{
+    forces.Add(new LumineuseForce());
+    forces.Add(new ObscureForce());
+    forces.Add(new NeutreForce());
+}
+
 void AfficherChoixForce()
 {
     Console.WriteLine("De quel coté de la force sera tu ?");
-    Console.WriteLine("1. coté lumineux");
-    Console.WriteLine("2. coté obscur");
-    Console.WriteLine("3. neutre");
+
+    foreach(var force in forces)
+    {
+        Console.WriteLine(force);
+    }
 }
 
 int AfficheForceEtRetourneChoixSelection()
 {
     AfficherChoixForce();
-    string SaisieForce = Console.ReadLine();
-    int TypeForce = int.Parse(SaisieForce);
+
+    string saisieForce = Console.ReadLine();
+    int TypeForce = int.Parse(saisieForce);
 
     return TypeForce;
     // on peut très bien faire :
@@ -217,6 +237,8 @@ void AfficherForceSelectionnee()
     const int forceObscur = 2;
     const int sansForce = 3;
 
+    player.ForceSelectionnee = forces[TypeForce - 1];
+
     // apres le case, il doit y avoir une constante obligatoirement !!
     switch (TypeForce)
     {
@@ -262,14 +284,15 @@ string[] noms = new string[4];
 Console.WriteLine(noms[2]);
 */
 
-Player player = new Player("yoda");
-Enemy ennemi = new(100, "dark vador");
 int[,] grille;
 
 void InitDonneesJeu()
 {
+    PreparerListeForce();
     grille = PrepareGrilleDuJeu();
 }
+
+InitDonneesJeu();
 
 /* tableau de tableau
 int[][] grilleDeJeuDeux = new int[20][];
@@ -386,8 +409,6 @@ AfficherForceSelectionnee();
 AffichageCredits();
 
 #endregion
-
-InitDonneesJeu();
 
 #region --- Lancement du Jeu ---
 

@@ -16,8 +16,7 @@ namespace HarryPotter.Games.Core
 
         public ObscureForce(): base("Côté obscur")
         {
-            this.Id = 0;
-            Console.WriteLine("Vous êtes passé du côté obscur de la force !");
+            this.Id = 2;
         }
 
 

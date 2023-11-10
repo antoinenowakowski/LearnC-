@@ -18,7 +18,6 @@ namespace HarryPotter.Games.Core
         public LumineuseForce(): base("Force Lumineuse")
         {
             this.Id = 1;
-            Console.WriteLine("Vous êtes côté lumineuse !");
         }
 
         #endregion
