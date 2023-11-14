@@ -29,6 +29,12 @@ Enemy ennemi = new(100, "dark vador");
 
 List<Force> forces = new List<Force>();
 
+Menu menu = new();
+menu.Add(new ItemMenu(1, "Nouvelle Partie"));
+menu.Add(new ItemMenu(2, "Charger Partie"));
+menu.Add(new ItemMenu(3, "Crédits"));
+menu.Add(new ItemMenu(4, "Quitter"));
+
 #endregion
 
 #region --- FRAMEWORK DU PROJET ---
@@ -98,10 +104,16 @@ void AfficherItemMenu(string ItemMenu, int indexMenu = 1)
 
 void AfficherMenu()
 {
-    AfficherItemMenu("nouvelle partie", 1);
-    AfficherItemMenu("charger partie", 2);
-    AfficherItemMenu("crédits", 3);
-    AfficherItemMenu("quitter", 4);
+
+    menu.Afficher();
+
+    /* acien systeme d'affichage 
+    //AfficherItemMenu("nouvelle partie", 1);
+    //AfficherItemMenu("charger partie", 2);
+    //AfficherItemMenu("crédits", 3);
+    //AfficherItemMenu("quitter", 4);
+    */
+
 }
 
 string RecupereSaisieAgeNonVide()
