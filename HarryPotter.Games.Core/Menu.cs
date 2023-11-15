@@ -35,12 +35,12 @@ namespace HarryPotter.Games.Core
         /// <summary>
         /// Affiche l'ensembre des items du menu
         /// </summary>
-        public void Afficher()
+        public void Afficher(AfficherInformation afficher)
         {
             foreach (var item in this.items) 
             {
                 // il appelle nativement item.ToString();
-                Console.WriteLine(item);
+                afficher(item);
             }
         }
 
