@@ -21,11 +21,11 @@ titre.ToUpper();
 
 #endregion
 
-#region VariablesGlobal
+#region --- VariablesGlobal ---
 
 
-Player player = new Player("yoda");
-Enemy ennemi = new(100, "dark vador");
+Player player = new Player("yoda", Console.WriteLine);
+Enemy ennemi = new("dark vador", Console.WriteLine);
 
 List<Force> forces = new List<Force>();
 
@@ -104,8 +104,11 @@ void AfficherItemMenu(string ItemMenu, int indexMenu = 1)
 
 void AfficherMenu()
 {
+    // Partie delegate
+    // AfficherInformation methodeAExecuter = Console.WriteLine;
+    AfficherInformation methodeAExecuter = AfficherEnBleu;
 
-    menu.Afficher();
+    menu.Afficher(methodeAExecuter);
 
     /* acien systeme d'affichage 
     //AfficherItemMenu("nouvelle partie", 1);
@@ -113,6 +116,17 @@ void AfficherMenu()
     //AfficherItemMenu("crédits", 3);
     //AfficherItemMenu("quitter", 4);
     */
+
+}
+
+void AfficherEnBleu(object value)
+{
+
+    Console.ForegroundColor = ConsoleColor.DarkBlue;
+
+    Console.WriteLine(value);
+
+    Console.ForegroundColor = ConsoleColor.White;
 
 }
 

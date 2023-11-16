@@ -24,30 +24,31 @@ namespace HarryPotter.Games.Core
 
         #region Constructors
 
-        public Player() : this(String.Empty, DateOnly.MinValue) {}
-
-        public Player(string pseudo, DateOnly dateNaissance): base(pseudo)
+        public Player(string pseudo, DateOnly dateNaissance, AfficherInformation afficher) : base(pseudo, afficher)
         {
             this.dateDeNaissance = dateNaissance;
         }
 
-        public Player(DateOnly dateNaissance) : this(string.Empty, dateNaissance)
+        public Player(AfficherInformation afficher) : this(String.Empty, DateOnly.MinValue, afficher) {}
+
+        public Player(string pseudo, AfficherInformation afficher) : this(pseudo, DateOnly.MinValue, afficher)
         {
+            this.Prenom = pseudo;
         }
 
-        public Player(string pseudo) : this(pseudo, DateOnly.MinValue)
+        public Player(DateOnly dateNaissance, AfficherInformation afficher) : this(string.Empty, dateNaissance, afficher)
         {
         }
 
         #endregion
 
-        #region Public méthods
+        #region Public methods
 
         public override void SeDeplacer()
         {
 
             // base.SeDeplacer();
-            Console.WriteLine($"{this.Prenom} Cours Forrest !");
+            this.afficher($"{this.Prenom} Cours Forrest !");
 
         }
 

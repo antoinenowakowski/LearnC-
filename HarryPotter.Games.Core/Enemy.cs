@@ -26,20 +26,8 @@ namespace HarryPotter.Games.Core
 
         #region Constructors
 
-        public Enemy(int vie)
+        public Enemy(string name, AfficherInformation afficher) : base(name, afficher)
         {
-            this.PointsDeVie = vie;
-        }
-        
-        public Enemy(int vie, string name)
-        {
-            this.PointsDeVie = vie;
-            this.Prenom = name;
-        }
-
-        public Enemy(string name)
-        {
-            this.Prenom = name;
         }
 
         #endregion
@@ -50,7 +38,7 @@ namespace HarryPotter.Games.Core
         {
 
             // base.SeDeplacer();
-            Console.WriteLine($"{this.Prenom} Saute !");
+            this.afficher($"{this.Prenom} Saute !");
 
         }
 

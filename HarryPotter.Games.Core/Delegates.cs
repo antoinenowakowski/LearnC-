@@ -10,6 +10,7 @@ namespace HarryPotter.Games.Core
     /// Délégué d'un affichage d'un item
     /// </summary>
     /// <param name="value"></param>
-    /// C'est un contrat, c-a-d, 
+    /// C'est un contrat
     public delegate void AfficherInformation(object value);
+
 }

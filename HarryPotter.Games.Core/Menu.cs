@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace HarryPotter.Games.Core
 {
+    /// <summary>
+    /// Classe du menu
+    /// </summary>
     public class Menu
     {
 
