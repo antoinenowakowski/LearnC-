@@ -106,10 +106,11 @@ void AfficherMenu()
 {
     // Partie delegate
     // AfficherInformation methodeAExecuter = Console.WriteLine;
-    AfficherInformation methodeAExecuter = AfficherEnBleu;
+    // AfficherInformation methodeAExecuter = AfficherEnBleu;
+    Action<object> methodeAExecuter = AfficherEnBleu;
 
     menu.Afficher(methodeAExecuter);
-
+    // menu.Afficher(AfficherEnBleu); plus simple car pas besoin d'instancier Action<object>
     /* acien systeme d'affichage 
     //AfficherItemMenu("nouvelle partie", 1);
     //AfficherItemMenu("charger partie", 2);
