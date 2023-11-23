@@ -118,6 +118,15 @@ void AfficherMenu()
     //AfficherItemMenu("quitter", 4);
     */
 
+    menu.Afficher(value =>
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+        Console.WriteLine(value);
+
+        Console.ForegroundColor = ConsoleColor.White;
+    });
+
 }
 
 void AfficherEnBleu(object value)
