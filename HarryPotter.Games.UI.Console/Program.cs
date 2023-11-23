@@ -118,14 +118,17 @@ void AfficherMenu()
     //AfficherItemMenu("quitter", 4);
     */
 
-    menu.Afficher(value =>
+    var AfficherEnVert = (object value) =>
     {
         Console.ForegroundColor = ConsoleColor.DarkGreen;
 
         Console.WriteLine(value);
 
         Console.ForegroundColor = ConsoleColor.White;
-    });
+    }
+
+
+    menu.Afficher(AfficherEnVert);
 
 }
 
@@ -448,8 +451,12 @@ AffichageCredits();
 
 #region --- Lancement du Jeu ---
 
-player.SeDeplacer(new Position(x : 1, y : 1));
+// player.SeDeplacer(new Position(x : 1, y : 1));
 // player.SeDeplacer(new Position() { X = 1, Y = 1 });
+
+player.SeDeplacer(new RandomCalculateurPosition());
+
+
 player.Attaquer(ennemi);
 
 ennemi.SeDeplacer();

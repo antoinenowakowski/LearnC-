@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HarryPotter.Games.Core.Interfaces;
+using HarryPotter.Games.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -47,6 +49,11 @@ namespace HarryPotter.Games.Core
         {
             this.SeDeplacer();
             this.CurrentPosition = newPosition;
+        }
+
+        public void SeDeplacer(ICalculateurPosition calculateurPosition)
+        {
+            this.CurrentPosition = calculateurPosition.Calculer();
         }
 
         public void Attaquer(Character Joueur)
