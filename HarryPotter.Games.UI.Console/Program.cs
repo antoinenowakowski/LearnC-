@@ -125,7 +125,7 @@ void AfficherMenu()
         Console.WriteLine(value);
 
         Console.ForegroundColor = ConsoleColor.White;
-    }
+    };
 
 
     menu.Afficher(AfficherEnVert);
@@ -454,7 +454,8 @@ AffichageCredits();
 // player.SeDeplacer(new Position(x : 1, y : 1));
 // player.SeDeplacer(new Position() { X = 1, Y = 1 });
 
-player.SeDeplacer(new RandomCalculateurPosition());
+// player.SeDeplacer(new RandomCalculateurPosition());
+player.SeDeplacer(new StaticCalculateurPosition(1, 2));
 
 
 player.Attaquer(ennemi);
