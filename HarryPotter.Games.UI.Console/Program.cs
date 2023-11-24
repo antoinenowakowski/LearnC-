@@ -457,6 +457,7 @@ AffichageCredits();
 // player.SeDeplacer(new RandomCalculateurPosition());
 player.SeDeplacer(new StaticCalculateurPosition(1, 2));
 
+// IList<Character> list = new List<Character>(); 
 
 player.Attaquer(ennemi);
 
