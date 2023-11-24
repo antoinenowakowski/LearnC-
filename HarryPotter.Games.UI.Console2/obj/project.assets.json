@@ -5,38 +5,11 @@
       "HarryPotter.Games.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "HarryPotter.Games.Core.Interfaces": "1.0.0",
-          "HarryPotter.Games.Core.Models": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/HarryPotter.Games.Core.dll": {}
         },
         "runtime": {
           "bin/placeholder/HarryPotter.Games.Core.dll": {}
-        }
-      },
-      "HarryPotter.Games.Core.Interfaces/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "HarryPotter.Games.Core.Models": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/HarryPotter.Games.Core.Interfaces.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HarryPotter.Games.Core.Interfaces.dll": {}
-        }
-      },
-      "HarryPotter.Games.Core.Models/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "compile": {
-          "bin/placeholder/HarryPotter.Games.Core.Models.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HarryPotter.Games.Core.Models.dll": {}
         }
       }
     }
@@ -46,16 +19,6 @@
       "type": "project",
       "path": "../HarryPotter.Games.Core/HarryPotter.Games.Core.csproj",
       "msbuildProject": "../HarryPotter.Games.Core/HarryPotter.Games.Core.csproj"
-    },
-    "HarryPotter.Games.Core.Interfaces/1.0.0": {
-      "type": "project",
-      "path": "../HarryPotter.Games.Core.Interfaces/HarryPotter.Games.Core.Interfaces.csproj",
-      "msbuildProject": "../HarryPotter.Games.Core.Interfaces/HarryPotter.Games.Core.Interfaces.csproj"
-    },
-    "HarryPotter.Games.Core.Models/1.0.0": {
-      "type": "project",
-      "path": "../HarryPotter.Games.Core.Models/HarryPotter.Games.Core.Models.csproj",
-      "msbuildProject": "../HarryPotter.Games.Core.Models/HarryPotter.Games.Core.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
