@@ -1,0 +1,63 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "HarryPotter.Games.UI.Console/1.0.0": {
+        "dependencies": {
+          "HarryPotter.Games.Core": "1.0.0"
+        },
+        "runtime": {
+          "HarryPotter.Games.UI.Console.dll": {}
+        }
+      },
+      "HarryPotter.Games.Core/1.0.0": {
+        "dependencies": {
+          "HarryPotter.Games.Core.Interfaces": "1.0.0",
+          "HarryPotter.Games.Core.Models": "1.0.0"
+        },
+        "runtime": {
+          "HarryPotter.Games.Core.dll": {}
+        }
+      },
+      "HarryPotter.Games.Core.Interfaces/1.0.0": {
+        "dependencies": {
+          "HarryPotter.Games.Core.Models": "1.0.0"
+        },
+        "runtime": {
+          "HarryPotter.Games.Core.Interfaces.dll": {}
+        }
+      },
+      "HarryPotter.Games.Core.Models/1.0.0": {
+        "runtime": {
+          "HarryPotter.Games.Core.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HarryPotter.Games.UI.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HarryPotter.Games.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HarryPotter.Games.Core.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HarryPotter.Games.Core.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

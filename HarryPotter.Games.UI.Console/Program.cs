@@ -1,6 +1,8 @@
 ﻿
 #region --- début str ---
 
+using HarryPotter.Games.Core.Interfaces.DataLayers;
+
 string titre = "jeu harry potter";
 titre = "un jeu épique !";
 
@@ -18,6 +20,21 @@ titre.ToUpper();
 //Console.WriteLine(sousTitre.Substring(0, sousTitre.Length - 1));
 
 //debug.writeline("==> je teste " + titre);
+
+#endregion
+
+#region --- EXEMPLE ---
+
+IDataLayer dataLayer = new AccesFichierDataLayer(@"C:\Users\antoine\Documents\teste\sauvegarde.txt");
+try
+{
+    dataLayer.Ecrire("coucou !");
+}
+catch (FileNotFoundException ex)
+{
+
+    Console.WriteLine("Fichier non présent");
+}
 
 #endregion
 

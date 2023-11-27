@@ -2,3 +2,17 @@ C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\obj\Debug\ne
 C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\obj\Debug\net6.0\HarryPotter.Games.Core.AssemblyInfoInputs.cache
 C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\obj\Debug\net6.0\HarryPotter.Games.Core.AssemblyInfo.cs
 C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\obj\Debug\net6.0\HarryPotter.Games.Core.csproj.CoreCompileInputs.cache
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\bin\Debug\net6.0\HarryPotter.Games.Core.deps.json
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\bin\Debug\net6.0\HarryPotter.Games.Core.dll
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\bin\Debug\net6.0\HarryPotter.Games.Core.pdb
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\bin\Debug\net6.0\HarryPotter.Games.Core.Interfaces.dll
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\bin\Debug\net6.0\HarryPotter.Games.Core.Models.dll
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\bin\Debug\net6.0\HarryPotter.Games.Core.Interfaces.pdb
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\bin\Debug\net6.0\HarryPotter.Games.Core.Models.pdb
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\obj\Debug\net6.0\HarryPotter.Games.Core.csproj.AssemblyReference.cache
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\obj\Debug\net6.0\HarryPotter.Games.Core.sourcelink.json
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\obj\Debug\net6.0\HarryPotter.Games.Core.csproj.CopyComplete
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\obj\Debug\net6.0\HarryPotter.Games.Core.dll
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\obj\Debug\net6.0\refint\HarryPotter.Games.Core.dll
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\obj\Debug\net6.0\HarryPotter.Games.Core.pdb
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core\obj\Debug\net6.0\ref\HarryPotter.Games.Core.dll

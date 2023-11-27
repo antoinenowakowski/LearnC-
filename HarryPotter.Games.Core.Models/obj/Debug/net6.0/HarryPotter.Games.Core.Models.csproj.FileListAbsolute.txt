@@ -1,0 +1,12 @@
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core.Models\bin\Debug\net6.0\HarryPotter.Games.Core.Models.deps.json
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core.Models\bin\Debug\net6.0\HarryPotter.Games.Core.Models.dll
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core.Models\bin\Debug\net6.0\HarryPotter.Games.Core.Models.pdb
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core.Models\obj\Debug\net6.0\HarryPotter.Games.Core.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core.Models\obj\Debug\net6.0\HarryPotter.Games.Core.Models.AssemblyInfoInputs.cache
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core.Models\obj\Debug\net6.0\HarryPotter.Games.Core.Models.AssemblyInfo.cs
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core.Models\obj\Debug\net6.0\HarryPotter.Games.Core.Models.csproj.CoreCompileInputs.cache
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core.Models\obj\Debug\net6.0\HarryPotter.Games.Core.Models.sourcelink.json
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core.Models\obj\Debug\net6.0\HarryPotter.Games.Core.Models.dll
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core.Models\obj\Debug\net6.0\refint\HarryPotter.Games.Core.Models.dll
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core.Models\obj\Debug\net6.0\HarryPotter.Games.Core.Models.pdb
+C:\Users\antoine\Desktop\dev\c#\Apprendre_c#\HarryPotter.Games.Core.Models\obj\Debug\net6.0\ref\HarryPotter.Games.Core.Models.dll
