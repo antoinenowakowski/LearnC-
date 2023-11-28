@@ -35,6 +35,16 @@ namespace HarryPotter.Games.Core.DataLayers
 
 
                 streamWriter.Close();
+            } else
+            {
+                FileStream fileStream = File.Open(this.CheminEnregistrement, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+
+                byte[] buffer = System.Text.Encoding.UTF8.GetBytes(item.ToString()); 
+
+                fileStream.Write(buffer, 0, buffer.Length);
+                fileStream.Flush();
+                fileStream.Close();
+
             }
 
             System.IO.File.WriteAllText(this.CheminEnregistrement, item.ToString());
