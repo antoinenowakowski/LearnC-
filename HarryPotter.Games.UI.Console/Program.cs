@@ -25,10 +25,10 @@ titre.ToUpper();
 
 #region --- EXEMPLE ---
 
-IDataLayer dataLayer = new AccesFichierDataLayer(@"C:\Users\antoine\Documents\teste\sauvegarde.txt");
+IDataLayer dataLayer = new SerializationDataLayer(@"C:\Users\antoine\Documents\teste\sauvegarde.xml");
 try
 {
-    dataLayer.Ecrire("coucou !");
+    dataLayer.Ecrire(new Menu());
 }
 catch (FileNotFoundException ex)
 {
